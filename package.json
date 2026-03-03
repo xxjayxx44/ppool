@@ -1,0 +1,20 @@
+{
+  "name": "yespowerR16-private-pool",
+  "version": "1.0.0",
+  "description": "Private Stratum pool for YespowerR16 (Yenten)",
+  "main": "pool.js",
+  "scripts": {
+    "start": "node pool.js",
+    "build": "node-gyp rebuild"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "bignum": "^0.13.1",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "node-json-rpc": "^1.1.1"
+  },
+  "devDependencies": {
+    "node-gyp": "^8.4.1"
+  }
+}
