@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private YespowerR16 Pool</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function refreshStats() {
+            $.get('/api/stats', function(data) {
+                $('#miners').text(data.miners);
+                $('#hashrate').text(data.hashrate.toFixed(2));
+                $('#blocks').text(data.blocks.length);
+            });
+        }
+        setInterval(refreshStats, 5000);
+        refreshStats();
+    </script>
+</head>
+<body>
+    <h1>YespowerR16 Private Pool</h1>
+    <p>Miners: <span id="miners">0</span></p>
+    <p>Pool Hashrate: <span id="hashrate">0</span> H/s</p>
+    <p>Blocks Found: <span id="blocks">0</span></p>
+</body>
+</html>
